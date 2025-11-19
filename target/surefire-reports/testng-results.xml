@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-19T11:31:42 IST" name="Suite" finished-at="2025-11-19T11:33:55 IST" duration-ms="133156">
+    <groups>
+    </groups>
+    <test started-at="2025-11-19T11:31:42 IST" name="Test" finished-at="2025-11-19T11:33:55 IST" duration-ms="133156">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@5ffead27]" started-at="2025-11-19T11:32:47 IST" name="setUp" finished-at="2025-11-19T11:32:52 IST" duration-ms="4823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLogin()[pri:1, instance:tests.LoginTest@5ffead27]" started-at="2025-11-19T11:32:52 IST" name="verifyLogin" finished-at="2025-11-19T11:32:57 IST" duration-ms="5019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5ffead27]" started-at="2025-11-19T11:32:57 IST" name="tearDown" finished-at="2025-11-19T11:33:02 IST" duration-ms="5306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.GetAllEmployeeListTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.GetAllEmployeeListTest@359f7cdf]" started-at="2025-11-19T11:33:21 IST" name="setUp" finished-at="2025-11-19T11:33:27 IST" duration-ms="6376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getAllEmployeeList()[pri:7, instance:tests.GetAllEmployeeListTest@359f7cdf]" started-at="2025-11-19T11:33:27 IST" name="getAllEmployeeList" description="Get All Employee List with Pagination Handling" finished-at="2025-11-19T11:33:50 IST" duration-ms="22527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllEmployeeList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.GetAllEmployeeListTest@359f7cdf]" started-at="2025-11-19T11:33:50 IST" name="tearDown" finished-at="2025-11-19T11:33:55 IST" duration-ms="5390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GetAllEmployeeListTest -->
+      <class name="tests.DeleteEmployeeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DeleteEmployeeTest@2e005c4b]" started-at="2025-11-19T11:32:07 IST" name="setUp" finished-at="2025-11-19T11:32:13 IST" duration-ms="5707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDeleteEmployeeTest()[pri:5, instance:tests.DeleteEmployeeTest@2e005c4b]" started-at="2025-11-19T11:32:13 IST" name="verifyDeleteEmployeeTest" description="Verify Delete Employee" finished-at="2025-11-19T11:32:30 IST" depends-on-methods="verifyAddEmployee" duration-ms="17103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteEmployeeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DeleteEmployeeTest@2e005c4b]" started-at="2025-11-19T11:32:30 IST" name="tearDown" finished-at="2025-11-19T11:32:35 IST" duration-ms="5306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.DeleteEmployeeTest -->
+      <class name="tests.AddEmployeeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AddEmployeeTest@47af7f3d]" started-at="2025-11-19T11:31:42 IST" name="setUp" finished-at="2025-11-19T11:31:49 IST" duration-ms="6662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddEmployee()[pri:2, instance:tests.AddEmployeeTest@47af7f3d]" started-at="2025-11-19T11:31:49 IST" name="verifyAddEmployee" finished-at="2025-11-19T11:32:01 IST" duration-ms="12389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddEmployeeTest@47af7f3d]" started-at="2025-11-19T11:32:01 IST" name="tearDown" finished-at="2025-11-19T11:32:07 IST" duration-ms="5401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AddEmployeeTest -->
+      <class name="tests.LoginInvalidTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginInvalidTest@4567f35d]" started-at="2025-11-19T11:32:35 IST" name="setUp" finished-at="2025-11-19T11:32:39 IST" duration-ms="4513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyInvalidLogin()[pri:0, instance:tests.LoginInvalidTest@4567f35d]" started-at="2025-11-19T11:32:39 IST" name="verifyInvalidLogin" finished-at="2025-11-19T11:32:42 IST" duration-ms="2526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginInvalidTest@4567f35d]" started-at="2025-11-19T11:32:42 IST" name="tearDown" finished-at="2025-11-19T11:32:47 IST" duration-ms="5287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginInvalidTest -->
+      <class name="tests.SearchEmployeeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SearchEmployeeTest@6356695f]" started-at="2025-11-19T11:33:02 IST" name="setUp" finished-at="2025-11-19T11:33:07 IST" duration-ms="4624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySearchEmployee()[pri:3, instance:tests.SearchEmployeeTest@6356695f]" started-at="2025-11-19T11:33:07 IST" name="verifySearchEmployee" finished-at="2025-11-19T11:33:15 IST" duration-ms="8203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchEmployeeTest@6356695f]" started-at="2025-11-19T11:33:15 IST" name="tearDown" finished-at="2025-11-19T11:33:21 IST" duration-ms="5415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SearchEmployeeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
