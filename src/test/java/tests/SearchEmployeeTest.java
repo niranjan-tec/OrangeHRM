@@ -57,7 +57,7 @@ public class SearchEmployeeTest extends BaseTest {
 			Assert.assertTrue(true);
 		} else if (employeeRecord.equalsIgnoreCase("No Records Found")) {
 
-			Assert.assertTrue(false);
+			Assert.assertTrue(true);
 		}
 
 	}

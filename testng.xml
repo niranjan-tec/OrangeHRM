@@ -18,5 +18,5 @@
 			<class name="tests.GetAllEmployeeListTest" />
 
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> 
+</suite>

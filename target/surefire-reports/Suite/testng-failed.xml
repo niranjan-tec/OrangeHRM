@@ -6,13 +6,20 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="tests.SearchEmployeeTest">
+      <class name="tests.AddEmployeeTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifySearchEmployee"/>
+          <include name="verifyAddEmployee"/>
         </methods>
-      </class> <!-- tests.SearchEmployeeTest -->
+      </class> <!-- tests.AddEmployeeTest -->
+      <class name="tests.DeleteEmployeeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyDeleteEmployeeTest"/>
+        </methods>
+      </class> <!-- tests.DeleteEmployeeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
