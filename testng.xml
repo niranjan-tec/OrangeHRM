@@ -16,6 +16,8 @@
 			<class name="tests.SearchEmployeeTest" />
 			<class name="tests.SearchEmployeeIDTest" />
 			<class name="tests.GetAllEmployeeListTest" />
+			<class name="tests.AddVacanciesTest"/>
+			
 
 		</classes>
 	</test> 

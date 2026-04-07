@@ -11,6 +11,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import utils.ConfigReader;
@@ -18,10 +20,10 @@ import utils.ConfigReader;
 /**
  * BaseTest
  *
- * Responsibilities:
- * - Initialize and quit the WebDriver used across tests.
- * - Provide shared utilities (config reader, screenshot capture, scrolling helpers).
- * - Serve as a parent class for test classes so they inherit common setup/teardown.
+ * Responsibilities: - Initialize and quit the WebDriver used across tests. -
+ * Provide shared utilities (config reader, screenshot capture, scrolling
+ * helpers). - Serve as a parent class for test classes so they inherit common
+ * setup/teardown.
  */
 public class BaseTest {
 
@@ -29,9 +31,8 @@ public class BaseTest {
 	public ConfigReader config;
 
 	/**
-	 * Runs once before any tests in the class.
-	 * - Initializes ConfigReader and WebDriver
-	 * - Maximizes window, sets implicit wait, and navigates to baseUrl
+	 * Runs once before any tests in the class. - Initializes ConfigReader and
+	 * WebDriver - Maximizes window, sets implicit wait, and navigates to baseUrl
 	 */
 	@BeforeClass
 	public void setUp() {
@@ -45,8 +46,8 @@ public class BaseTest {
 	}
 
 	/**
-	 * Runs once after all tests in the class.
-	 * - Pauses briefly then quits the WebDriver if it exists.
+	 * Runs once after all tests in the class. - Pauses briefly then quits the
+	 * WebDriver if it exists.
 	 */
 	@AfterClass
 	public void tearDown() throws InterruptedException {
@@ -60,8 +61,8 @@ public class BaseTest {
 	}
 
 	/**
-	 * Capture a screenshot and return the saved file path.
-	 * Useful for attaching to reports on failure.
+	 * Capture a screenshot and return the saved file path. Useful for attaching to
+	 * reports on failure.
 	 */
 	public String captureScreen(String tname) {
 
@@ -77,22 +78,34 @@ public class BaseTest {
 		return targetFilePath;
 
 	}
-	
-	 // Scroll to the bottom of the page
-    public void scrollToBottom() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-    }
 
-    // Scroll the page until the given element is visible
-    public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-    }
+	// Scroll to the bottom of the page
+	public void scrollToBottom() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	}
 
-    // Scroll to the top (or near top) of the page
-    public void scrollToTop() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, 500);");
-    }
+	// Scroll the page until the given element is visible
+	public void scrollToElement(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	// Scroll to the top (or near top) of the page
+	public void scrollToTop() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, 500);");
+	}
+
+	// Explicit wait method to wait for an element to be visible
+	public void waitForElementVisible(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public void waitForElementClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
 }

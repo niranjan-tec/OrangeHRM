@@ -2,7 +2,11 @@ D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\base\BaseTest.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\pages\LoginPage.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\pages\MyInfo.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\pages\PIMMenu.java
+D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\pages\Recruitment.java
+D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\practice_test\Hotelogix.java
+D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\practice_test\Practice.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\tests\AddEmployeeTest.java
+D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\tests\AddVacanciesTest.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\tests\DeleteEmployeeTest.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\tests\GetAllEmployeeListTest.java
 D:\Automation_Projects\OrangeHRM\OrangeHRM\src\test\java\tests\LoginInvalidTest.java
