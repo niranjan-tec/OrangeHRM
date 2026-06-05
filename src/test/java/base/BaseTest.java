@@ -4,6 +4,8 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -107,5 +109,26 @@ public class BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+	
+	// Method to generate a random 4-digit number for unique employee IDs
+	  protected int generateNumber() {
+	        return ThreadLocalRandom.current().nextInt(1000, 10000);
+	    }
+	  
+	  // Method to generate a random string of specified length for unique names
+	  
+	  protected String generateRandomString(int length) {
+	        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	        Random random = new Random();
+
+	        StringBuilder sb = new StringBuilder();
+
+	        for (int i = 0; i < length; i++) {
+	            sb.append(characters.charAt(random.nextInt(characters.length())));
+	        }
+
+	        return sb.toString();
+	    }
+	  
 
 }
