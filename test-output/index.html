@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">8 methods,  1 skipped,  7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginInvalidTest" class="method navigator-link" hash-for-method="verifyInvalidLogin">verifyInvalidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,11 +137,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginInvalidTest" class="method navigator-link" hash-for-method="verifyInvalidLogin">verifyInvalidLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -153,6 +162,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.LoginInvalidTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogin">
+                  </a> <!-- verifyInvalidLogin -->
+                  <span class="method-name">verifyInvalidLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [287edd5c16b7c246b8f8649856a06c4e, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\HOTELO~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59723}, goog:processID: 3784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59723/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 287edd5c16b7c246b8f8649856a06c4e
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:427)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at base.BaseTest.setUp(BaseTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -213,21 +262,6 @@
                   <span class="method-name">getAllEmployeeList</span>
                   <em>
 (Get All Employee List with Pagination Handling)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.LoginInvalidTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyInvalidLogin">
-                  </a> <!-- verifyInvalidLogin -->
-                  <span class="method-name">verifyInvalidLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -343,42 +377,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAddVacancy')
-data.setCell(0, 2, 'tests.AddVacanciesTest')
-data.setCell(0, 3, 63412);
+data.setCell(0, 1, 'getAllEmployeeList')
+data.setCell(0, 2, 'tests.GetAllEmployeeListTest')
+data.setCell(0, 3, 77923);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getAllEmployeeList')
-data.setCell(1, 2, 'tests.GetAllEmployeeListTest')
-data.setCell(1, 3, 62493);
+data.setCell(1, 1, 'verifyUpdateMyInfo')
+data.setCell(1, 2, 'tests.UpdateMyInfoTest')
+data.setCell(1, 3, 18102);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyAddEmployee')
-data.setCell(2, 2, 'tests.AddEmployeeTest')
-data.setCell(2, 3, 18694);
+data.setCell(2, 1, 'verifyAddVacancy')
+data.setCell(2, 2, 'tests.AddVacanciesTest')
+data.setCell(2, 3, 17281);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyUpdateMyInfo')
-data.setCell(3, 2, 'tests.UpdateMyInfoTest')
-data.setCell(3, 3, 16792);
+data.setCell(3, 1, 'verifyDeleteEmployeeTest')
+data.setCell(3, 2, 'tests.DeleteEmployeeTest')
+data.setCell(3, 3, 12855);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifySearchEmployee')
-data.setCell(4, 2, 'tests.SearchEmployeeTest')
-data.setCell(4, 3, 16401);
+data.setCell(4, 1, 'verifyAddEmployee')
+data.setCell(4, 2, 'tests.AddEmployeeTest')
+data.setCell(4, 3, 12566);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyDeleteEmployeeTest')
-data.setCell(5, 2, 'tests.DeleteEmployeeTest')
-data.setCell(5, 3, 13880);
+data.setCell(5, 1, 'verifySearchEmployee')
+data.setCell(5, 2, 'tests.SearchEmployeeTest')
+data.setCell(5, 3, 9528);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyLogin')
 data.setCell(6, 2, 'tests.LoginTest')
-data.setCell(6, 3, 5368);
+data.setCell(6, 3, 6434);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyInvalidLogin')
 data.setCell(7, 2, 'tests.LoginInvalidTest')
-data.setCell(7, 3, 2078);
+data.setCell(7, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -418,116 +452,110 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddEmployee</span>
-                <span class="method-start">4573 ms</span>
+                <span class="method-start">4494 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23276 ms</span>
+                <span class="method-start">17077 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.DeleteEmployeeTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">28591 ms</span>
+                <span class="method-start">22395 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyDeleteEmployeeTest</span>
-                <span class="method-start">33340 ms</span>
+                <span class="method-start">26141 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">47225 ms</span>
+                <span class="method-start">39001 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginInvalidTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp</span>
-                <span class="method-start">52537 ms</span>
+                <span class="method-start">44327 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyInvalidLogin</span>
-                <span class="method-start">56826 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">58907 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">64183 ms</span>
+                <span class="method-start">226006 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyLogin</span>
-                <span class="method-start">68717 ms</span>
+                <span class="method-start">230054 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">74088 ms</span>
+                <span class="method-start">236491 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchEmployeeTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">79396 ms</span>
+                <span class="method-start">241755 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifySearchEmployee</span>
-                <span class="method-start">84414 ms</span>
+                <span class="method-start">245512 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">100818 ms</span>
+                <span class="method-start">255043 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.GetAllEmployeeListTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">106187 ms</span>
+                <span class="method-start">260339 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">getAllEmployeeList</span>
-                <span class="method-start">111889 ms</span>
+                <span class="method-start">264279 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">174386 ms</span>
+                <span class="method-start">342204 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AddVacanciesTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">179663 ms</span>
+                <span class="method-start">347543 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyAddVacancy</span>
-                <span class="method-start">288764 ms</span>
+                <span class="method-start">351486 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">352178 ms</span>
+                <span class="method-start">368771 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.UpdateMyInfoTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">357437 ms</span>
+                <span class="method-start">374113 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyUpdateMyInfo</span>
-                <span class="method-start">436877 ms</span>
+                <span class="method-start">377706 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">453672 ms</span>
+                <span class="method-start">395811 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

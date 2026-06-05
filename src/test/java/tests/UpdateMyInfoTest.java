@@ -1,6 +1,5 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -37,7 +36,7 @@ public class UpdateMyInfoTest extends BaseTest {
 		myInfo.enterDriversLicenseNumber("DL"+String.valueOf(randomNumber));
 		myInfo.selectGender();
 		myInfo.clickSaveButton();
-		waitForElementClickable(myInfo.personalDetailsOption);
+		scrollToTop();
 		myInfo.clickPersonalDetailsOption();
 		Thread.sleep(3000);
 		String actualName = myInfo.getEmployeeName();
