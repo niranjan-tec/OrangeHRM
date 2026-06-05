@@ -18,9 +18,10 @@ public class AddEmployeeTest extends BaseTest {
 	 * - Logs in using valid credentials
 	 * - Navigates to Add Employee and fills details
 	 * - Saves and verifies Personal Details page is shown
+	 * @throws InterruptedException 
 	 */
 	@Test(priority=2)
-	public void verifyAddEmployee() {
+	public void verifyAddEmployee() throws InterruptedException {
 		// Login
 		
 		LoginPage loginPage = new LoginPage(driver);
@@ -36,8 +37,16 @@ public class AddEmployeeTest extends BaseTest {
 		addEmployee.clickPIM();
 		addEmployee.clickAddEmployee();
 		// Entering employee's personal details
-		addEmployee.enterFirstName("Niranjan");
-		addEmployee.enterLastName("Verma");
+		String firstName = generateRandomString(10);
+		addEmployee.enterFirstName(firstName);
+		String middleName = generateRandomString(5);
+		addEmployee.enterMiddleName(middleName);
+		String lastName = generateRandomString(8);
+		addEmployee.enterLastName(lastName);
+		
+		int randomNumber = generateNumber();
+		Thread.sleep(2000);
+		addEmployee.enterEmployeeId(String.valueOf(randomNumber));
 		// Saving the new employee details
 		addEmployee.clickSave();
 		

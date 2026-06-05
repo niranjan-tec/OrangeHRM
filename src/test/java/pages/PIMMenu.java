@@ -2,6 +2,7 @@ package pages;
 
 import java.util.List;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,11 +29,17 @@ public class PIMMenu {
 	@FindBy(xpath = "//a[normalize-space()='Add Employee']")
 	WebElement addEmployeeOption;
 
-	@FindBy(xpath = "//input[@placeholder='First Name']")
+	@FindBy(xpath = "//input[contains(@name,'firstName')]")
 	WebElement firstNameField;
+	
+	@FindBy(xpath = "//input[contains(@name,'middleName')]")
+	WebElement middleNameField;
 
-	@FindBy(xpath = "//input[@placeholder='Last Name']")
+	@FindBy(xpath = "//input[contains(@name,'lastName')]")
 	WebElement lastNameField;
+	
+	@FindBy(xpath = "//label[normalize-space()='Employee Id']/ancestor::div[contains(@class,'oxd-input-group')]//input")
+	WebElement employeeIdField;
 
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement saveButton;
@@ -79,10 +86,24 @@ public class PIMMenu {
 	public void enterFirstName(String firstName) {
 		firstNameField.sendKeys(firstName);
 	}
+	
+	public void enterMiddleName(String middleName) {
+		middleNameField.sendKeys(middleName);
+		
+	}
 
 	public void enterLastName(String lastName) {
 		lastNameField.sendKeys(lastName);
 	}
+	
+	public void enterEmployeeId(String employeeId) {
+		
+		employeeIdField.click();
+		employeeIdField.sendKeys(Keys.CONTROL + "a");
+		employeeIdField.sendKeys(Keys.DELETE);
+		employeeIdField.sendKeys(employeeId);
+	}
+	
 
 	public void clickSave() {
 		saveButton.click();
