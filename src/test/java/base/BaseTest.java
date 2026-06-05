@@ -91,12 +91,13 @@ public class BaseTest {
 	public void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
+
 	}
 
 	// Scroll to the top (or near top) of the page
 	public void scrollToTop() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, 500);");
+		js.executeScript("window.scrollTo(0, 0);");
 	}
 
 	// Explicit wait method to wait for an element to be visible

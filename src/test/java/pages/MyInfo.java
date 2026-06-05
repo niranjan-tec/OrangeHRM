@@ -22,7 +22,8 @@ public class MyInfo extends BaseTest{
 	@FindBy(xpath = "//span[normalize-space()='My Info']")
 	public WebElement myInfoMenu;
 
-	@FindBy(xpath = "//a[normalize-space()='Personal Details']")
+	//@FindBy(xpath = "//a[contains(@href,'viewPersonalDetails')]")
+	@FindBy(xpath = "//div[@role='tab']//a[normalize-space()='Personal Details']")
 	public WebElement personalDetailsOption;
 
 	@FindBy(xpath = "//input[@placeholder='First Name']")
