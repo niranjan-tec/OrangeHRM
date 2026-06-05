@@ -32,7 +32,7 @@ public class DeleteEmployeeTest extends BaseTest {
 		PIMMenu searchEmployee = new PIMMenu(driver);
 		searchEmployee.clickPIM();
 		searchEmployee.clickEmployeeList();
-		searchEmployee.enterEmployeeName("Niranjan");
+		searchEmployee.enterEmployeeName("a");
 		searchEmployee.clickSearch();
 		Thread.sleep(2000);
 
