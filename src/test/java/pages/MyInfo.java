@@ -118,7 +118,8 @@ public class MyInfo extends BaseTest {
 	    // Click Personal Details option
 		
 	    personalDetailsOption.click();
-
+		Thread.sleep(2000);
+		
 	    // First Name
 	    waitForElementClickable(firstNameField);
 	    firstNameField.click();
@@ -170,11 +171,13 @@ public class MyInfo extends BaseTest {
 	
 	// Method for updating contact details
 
-	public void updateContactDetails() {
+	public void updateContactDetails() throws InterruptedException {
 		
 		contactDetailsOption.click();
+		Thread.sleep(2000);
 
 		// Street 1
+		waitForElementClickable(street1Field);
 		street1Field.click();
 		street1Field.sendKeys(Keys.CONTROL + "a");
 		street1Field.sendKeys(Keys.DELETE);

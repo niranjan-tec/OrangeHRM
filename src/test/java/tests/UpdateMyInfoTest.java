@@ -10,7 +10,7 @@ import pages.MyInfo;
 public class UpdateMyInfoTest extends BaseTest {
 
 
-	@Test(priority =8,description = "Verify that user is able to update personal details in My Info page")
+	@Test(priority =2,description = "Verify that user is able to update personal details in My Info page")
 
 	public void verifyUpdatePersonalDetails() throws InterruptedException {
 
@@ -20,7 +20,7 @@ public class UpdateMyInfoTest extends BaseTest {
 		loginPage.loginToApp(username, password);
 		MyInfo myInfo = new MyInfo(driver);
 		myInfo.clickMyInfoMenu();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		myInfo.updatePersonalDetails();
 		String updateMessg = myInfo.getUpdatedSuccessMessage();
 		Assert.assertEquals(updateMessg, "Successfully Updated");
