@@ -20,7 +20,7 @@ public class AddEmployeeTest extends BaseTest {
 	 * - Saves and verifies Personal Details page is shown
 	 * @throws InterruptedException 
 	 */
-	@Test(priority=2)
+	@Test(priority=8)
 	public void verifyAddEmployee() throws InterruptedException {
 		// Login
 		
