@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -36,7 +37,7 @@ public class BaseTest {
 	 * Runs once before any tests in the class. - Initializes ConfigReader and
 	 * WebDriver - Maximizes window, sets implicit wait, and navigates to baseUrl
 	 */
-	@BeforeClass
+	@BeforeMethod
 	public void setUp() {
 
 		config = new ConfigReader();
@@ -51,7 +52,7 @@ public class BaseTest {
 	 * Runs once after all tests in the class. - Pauses briefly then quits the
 	 * WebDriver if it exists.
 	 */
-	@AfterClass
+	@AfterMethod
 	public void tearDown() throws InterruptedException {
 
 		Thread.sleep(5000);
@@ -105,15 +106,21 @@ public class BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-
+	
+	public void waitForElementVisibleByLocator(By locator) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+	
 	public void waitForElementClickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
-	// Method to generate a random 4-digit number for unique employee IDs
+	// Method to generate a random 6-digit number for unique employee IDs
 	  protected int generateNumber() {
-	        return ThreadLocalRandom.current().nextInt(1000, 10000);
+	        return ThreadLocalRandom.current().nextInt(100000, 1000000);
 	    }
 	  
 	  // Method to generate a random string of specified length for unique names

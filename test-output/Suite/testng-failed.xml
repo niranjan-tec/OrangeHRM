@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.LoginInvalidTest">
+      <class name="tests.UpdateMyInfoTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyInvalidLogin"/>
+          <include name="verifyUpdatePersonalDetails"/>
+          <include name="verifyUpdateContactDetails"/>
         </methods>
-      </class> <!-- tests.LoginInvalidTest -->
+      </class> <!-- tests.UpdateMyInfoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
