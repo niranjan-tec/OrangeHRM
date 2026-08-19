@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -57,7 +58,7 @@ public class MyInfo extends BaseTest {
 	public WebElement saveButton;
 	@FindBy(xpath = "//div[@class='orangehrm-edit-employee-name']")
 	public WebElement employeeNameDisplay;
-	
+
 	// Locators for update profile contact details
 
 	@FindBy(xpath = "//a[normalize-space()='Contact Details']")
@@ -83,96 +84,115 @@ public class MyInfo extends BaseTest {
 
 	@FindBy(xpath = "//div[@role='listbox']//div[@role='option']")
 	public java.util.List<WebElement> options;
-	
+
 	@FindBy(xpath = "//label[text()='Home']/ancestor::div[contains(@class,'oxd-input-group')]//input")
 	public WebElement homeField;
-	
+
 	@FindBy(xpath = "//label[text()='Mobile']/ancestor::div[contains(@class,'oxd-input-group')]//input")
 	public WebElement mobileField;
-	
+
 	@FindBy(xpath = "//label[text()='Work']/ancestor::div[contains(@class,'oxd-input-group')]//input")
 	public WebElement workField;
-	
+
 	@FindBy(xpath = "//label[text()='Work Email']/ancestor::div[contains(@class,'oxd-input-group')]//input")
 	public WebElement workEmailField;
-	
+
 	@FindBy(xpath = "//label[text()='Other Email']/ancestor::div[contains(@class,'oxd-input-group')]//input")
 	public WebElement otherEmailField;
-	
+
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	public WebElement contactDetailsSaveButton;
-	
+
 	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--toast-message')]")
 	public WebElement updatedSuccessMessage;
-	
 
+	@FindBy(xpath = "//a[normalize-space()='Emergency Contacts']")
+	public WebElement emergencyContactDetailsOption;
+
+	@FindBy(xpath = "(//button[contains(@type,'button')]/i[@class='oxd-icon bi-plus oxd-button-icon'])[1]")
+	public WebElement assignedEmergencyContactsButton;
+
+	@FindBy(xpath = "(//label[@class='oxd-label oxd-input-field-required']/following::input)[1]")
+	public WebElement emergencyContactNameField;
+
+	@FindBy(xpath = "(//label[@class='oxd-label oxd-input-field-required']/following::input)[2]")
+	public WebElement emergencyContactRelationshipField;
+
+	@FindBy(xpath = "(//label[@class='oxd-label']/following::input)[1]")
+	public WebElement emergencyContactHomeTelephoneField;
+
+	@FindBy(xpath = "(//label[@class='oxd-label']/following::input)[2]")
+	public WebElement emergencyMobileField;
+
+	@FindBy(xpath = "(//label[@class='oxd-label']/following::input)[3]")
+	public WebElement emergencyContactWorkTelephoneField;
+
+	@FindBy(css = "button[type='submit']")
+	public WebElement emergencyContactSaveButton;
 
 	public void clickMyInfoMenu() {
 		myInfoMenu.click();
 	}
 
-
-	
 	public void updatePersonalDetails() throws InterruptedException {
 
-	    // Click Personal Details option
-		
-	    personalDetailsOption.click();
+		// Click Personal Details option
+
+		personalDetailsOption.click();
 		Thread.sleep(2000);
-		
-	    // First Name
-	    waitForElementClickable(firstNameField);
-	    firstNameField.click();
-	    firstNameField.sendKeys(Keys.CONTROL + "a");
-	    firstNameField.sendKeys(Keys.DELETE);
-	    firstNameField.sendKeys(generateRandomString(10));
 
-	    // Middle Name
-	    middleNameField.click();
-	    middleNameField.sendKeys(Keys.CONTROL + "a");
-	    middleNameField.sendKeys(Keys.DELETE);
-	    middleNameField.sendKeys(generateRandomString(10));
+		// First Name
+		waitForElementClickable(firstNameField);
+		firstNameField.click();
+		firstNameField.sendKeys(Keys.CONTROL + "a");
+		firstNameField.sendKeys(Keys.DELETE);
+		firstNameField.sendKeys(generateRandomString(10));
 
-	    // Last Name
-	    lastNameField.click();
-	    lastNameField.sendKeys(Keys.CONTROL + "a");
-	    lastNameField.sendKeys(Keys.DELETE);
-	    lastNameField.sendKeys(generateRandomString(10));
+		// Middle Name
+		middleNameField.click();
+		middleNameField.sendKeys(Keys.CONTROL + "a");
+		middleNameField.sendKeys(Keys.DELETE);
+		middleNameField.sendKeys(generateRandomString(10));
 
-	    // Employee ID
-	    employeeIdField.click();
-	    employeeIdField.sendKeys(Keys.CONTROL + "a");
-	    employeeIdField.sendKeys(Keys.DELETE);
-	    employeeIdField.sendKeys(generateNumber() + "");
+		// Last Name
+		lastNameField.click();
+		lastNameField.sendKeys(Keys.CONTROL + "a");
+		lastNameField.sendKeys(Keys.DELETE);
+		lastNameField.sendKeys(generateRandomString(10));
 
-	    // Other ID
-	    otherIdField.click();
-	    otherIdField.sendKeys(Keys.CONTROL + "a");
-	    otherIdField.sendKeys(Keys.DELETE);
-	    otherIdField.sendKeys(generateNumber() + "");
+		// Employee ID
+		employeeIdField.click();
+		employeeIdField.sendKeys(Keys.CONTROL + "a");
+		employeeIdField.sendKeys(Keys.DELETE);
+		employeeIdField.sendKeys(generateNumber() + "");
 
-	    // Driver's License Number
-	    driversLicenseNumberField.click();
-	    driversLicenseNumberField.sendKeys(Keys.CONTROL + "a");
-	    driversLicenseNumberField.sendKeys(Keys.DELETE);
-	    driversLicenseNumberField.sendKeys(generateNumber() + "");
+		// Other ID
+		otherIdField.click();
+		otherIdField.sendKeys(Keys.CONTROL + "a");
+		otherIdField.sendKeys(Keys.DELETE);
+		otherIdField.sendKeys(generateNumber() + "");
 
-	    // Gender Selection
-	    if (maleGenderOption.isSelected()) {
-	        femaleGenderOption.click();
-	    } else {
-	        maleGenderOption.click();
-	    }
+		// Driver's License Number
+		driversLicenseNumberField.click();
+		driversLicenseNumberField.sendKeys(Keys.CONTROL + "a");
+		driversLicenseNumberField.sendKeys(Keys.DELETE);
+		driversLicenseNumberField.sendKeys(generateNumber() + "");
 
-	    // Save Button
-	    saveButton.click();
+		// Gender Selection
+		if (maleGenderOption.isSelected()) {
+			femaleGenderOption.click();
+		} else {
+			maleGenderOption.click();
+		}
+
+		// Save Button
+		saveButton.click();
 	}
-	
-	
+
 	// Method for updating contact details
 
 	public void updateContactDetails() throws InterruptedException {
-		
+
 		contactDetailsOption.click();
 		Thread.sleep(2000);
 
@@ -216,10 +236,10 @@ public class MyInfo extends BaseTest {
 		countryDropdown.click();
 
 		for (WebElement option : options) {
-		    if (option.getText().equalsIgnoreCase("India")) {
-		        option.click();
-		        break;
-		    }
+			if (option.getText().equalsIgnoreCase("India")) {
+				option.click();
+				break;
+			}
 		}
 
 		// Home
@@ -257,12 +277,26 @@ public class MyInfo extends BaseTest {
 		String otherEmail = generateRandomString(10) + "@gmail.com";
 		otherEmailField.sendKeys(otherEmail);
 
-		contactDetailsSaveButton.click();		
-		
+		contactDetailsSaveButton.click();
+
 	}
-	
+
+	public void updateEmergencyContactDetails() {
+
+		emergencyContactDetailsOption.click();
+		waitForElementClickable(assignedEmergencyContactsButton);
+		assignedEmergencyContactsButton.click();
+		emergencyContactNameField.sendKeys(generateRandomString(10));
+		emergencyContactRelationshipField.sendKeys(generateRandomString(10));
+		emergencyContactHomeTelephoneField.sendKeys(generateNumber() + "/(110)");
+		emergencyMobileField.sendKeys(generateNumber() + "4333");
+		emergencyContactWorkTelephoneField.sendKeys(generateNumber() + "");
+		emergencyContactSaveButton.click();
+
+	}
+
 	// Method to get the success message after updating personal/contact details
-	
+
 	public String getUpdatedSuccessMessage() {
 		waitForElementVisible(updatedSuccessMessage);
 		return updatedSuccessMessage.getText();

@@ -7,8 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyUpdatePersonalDetails"/>
-          <include name="verifyUpdateContactDetails"/>
+          <include name="verifyUpdateEmergencyContactDetails"/>
         </methods>
       </class> <!-- tests.UpdateMyInfoTest -->
     </classes>

@@ -42,5 +42,20 @@ public class UpdateMyInfoTest extends BaseTest {
 		Assert.assertEquals(updateMessg, "Successfully Updated");
 
 	}
+	
+	@Test(priority=10,description = "Verify that user is able to update emergency contact details in My Info page")
+	 public void verifyUpdateEmergencyContactDetails() throws InterruptedException {
+		
+		LoginPage loginPage = new LoginPage(driver);
+		String username = config.getProperty("username");
+		String password = config.getProperty("password");
+		loginPage.loginToApp(username, password);
+		MyInfo myInfo = new MyInfo(driver);
+		myInfo.clickMyInfoMenu();
+		myInfo.updateEmergencyContactDetails();
+		String updateMessg = myInfo.getUpdatedSuccessMessage();
+		Assert.assertEquals(updateMessg, "Successfully Saved");
+	
+	}
 
 }
