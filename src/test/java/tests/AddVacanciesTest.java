@@ -39,7 +39,7 @@ public class AddVacanciesTest extends BaseTest {
 
 			// System.out.println(option.getText());
 
-			if (option.getText().equalsIgnoreCase("Chief Executive Officer")) {
+			if (option.getText().equalsIgnoreCase("Chief Financial Officer")) {
 				option.click();
 				break;
 			}
